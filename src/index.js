@@ -1,6 +1,6 @@
 import { Command } from 'commander';
-import { getInitCommand } from './init.js'
+import * as init from './commands/init.js'
 const program = new Command();
 
-program.addCommand(getInitCommand());
+program.addCommand(init.getCommand());
 await program.parseAsync(process.argv);
